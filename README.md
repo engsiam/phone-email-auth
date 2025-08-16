@@ -13,7 +13,7 @@ A **full-featured authentication system** built with **Node.js, TypeScript, Expr
 5. [Environment Variables](#environment-variables)
 6. [API Endpoints](#api-endpoints)
 7. [Password Requirements](#password-requirements)
-8. 
+8. [Postman Collection](#postman-collection)
 
 ## **Features**
 
@@ -160,4 +160,4 @@ You can use the provided **Postman collection** to test all API endpoints.
 3. Select `auth-system-ts.postman.json`.
 4. All routes (register, login, verify, reset password, profile, etc.) will be available.
 5. Ensure your server is running at `http://localhost:5000` and your `.env` file is correctly configured.
-# phone-email-auth
+
