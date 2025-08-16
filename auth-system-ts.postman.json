@@ -1,0 +1,225 @@
+{
+  "info": {
+    "name": "Auth System TS API",
+    "_postman_id": "f1f1f1f1-2222-3333-4444-555555555555",
+    "description": "Postman collection for the TypeScript Auth System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"fullName\": \"John Doe\", \"phone\": \"01712345678\", \"email\": \"john@example.com\", \"password\": \"StrongPass@1234\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Phone",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\": \"01712345678\", \"otp\": \"123456\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/verify-phone",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "verify-phone"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Verify Email",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/verify-email/<token>",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "verify-email",
+            "<token>"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\": \"01712345678\", \"password\": \"StrongPass@1234\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Forgot Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\": \"01712345678\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/forgot-password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "forgot-password"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Reset Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\": \"01712345678\", \"otp\": \"654321\", \"newPassword\": \"NewStrongPass@123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/reset-password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reset-password"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Change Password",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer <jwt_token>"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"oldPassword\": \"NewStrongPass@123\", \"newPassword\": \"AnotherPass@1234\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/change-password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "change-password"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer <jwt_token>"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "profile"
+          ]
+        }
+      }
+    }
+  ]
+}
